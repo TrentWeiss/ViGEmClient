@@ -11,7 +11,9 @@ PUBLIC
     $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
     $<INSTALL_INTERFACE:include>
 )
-
+target_link_libraries(${PROJECT_NAME}
+    INTERFACE setupapi
+)
 install(TARGETS ${PROJECT_NAME}
     EXPORT ${PROJECT_NAME}-export
     RUNTIME DESTINATION bin
