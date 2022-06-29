@@ -14,7 +14,13 @@ PUBLIC
 target_link_libraries(${PROJECT_NAME}
     INTERFACE setupapi
 )
-install(TARGETS ${PROJECT_NAME}
+add_executable(vigem_example
+    example.cpp
+)
+target_link_libraries(vigem_example PUBLIC ${PROJECT_NAME})
+target_compile_definitions(vigem_example PUBLIC WIN32_LEAN_AND_MEAN)
+
+install(TARGETS ${PROJECT_NAME} vigem_example
     EXPORT ${PROJECT_NAME}-export
     RUNTIME DESTINATION bin
     LIBRARY DESTINATION lib
