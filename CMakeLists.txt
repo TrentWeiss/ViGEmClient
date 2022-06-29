@@ -18,7 +18,7 @@ install(TARGETS ${PROJECT_NAME}
     LIBRARY DESTINATION lib
     ARCHIVE DESTINATION lib
 )
-install(DIRECTORY include/${PROJECT_NAME}
+install(DIRECTORY include/ViGEm
     DESTINATION include
     FILES_MATCHING PATTERN "*.h"
 )
