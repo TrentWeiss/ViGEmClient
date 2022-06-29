@@ -11,6 +11,7 @@ PUBLIC
     $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
     $<INSTALL_INTERFACE:include>
 )
+target_compile_definitions(${PROJECT_NAME} PRIVATE VIGEM_USE_CRASH_HANDLER UNICODE)
 target_link_libraries(${PROJECT_NAME}
     INTERFACE setupapi
 )
